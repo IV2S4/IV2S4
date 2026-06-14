@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ARIA Color Palette - J.A.R.V.I.S Style -->
+    <color name="aria_bg_deep">#030A14</color>
+    <color name="aria_bg_dark">#050D1A</color>
+    <color name="aria_bg_card">#0A1628</color>
+    <color name="aria_bg_card_alt">#0D1F3C</color>
+
+    <!-- Neon Cyan - Primary -->
+    <color name="aria_cyan">#00F5FF</color>
+    <color name="aria_cyan_dim">#0099AA</color>
+    <color name="aria_cyan_dark">#004455</color>
+    <color name="aria_cyan_glow">#4DFBFF</color>
+
+    <!-- Neon Blue - Secondary -->
+    <color name="aria_blue">#0066FF</color>
+    <color name="aria_blue_dim">#003D99</color>
+    <color name="aria_blue_light">#4D99FF</color>
+
+    <!-- Neon Orange - Accent (Iron Man style) -->
+    <color name="aria_orange">#FF6B00</color>
+    <color name="aria_orange_dim">#993F00</color>
+    <color name="aria_orange_glow">#FF9F4D</color>
+
+    <!-- Status Colors -->
+    <color name="aria_green">#00FF88</color>
+    <color name="aria_red">#FF2244</color>
+    <color name="aria_yellow">#FFD600</color>
+
+    <!-- Text Colors -->
+    <color name="aria_text_primary">#E8F4FF</color>
+    <color name="aria_text_secondary">#7BB8D4</color>
+    <color name="aria_text_dim">#3A6080</color>
+
+    <!-- Grid/Border Colors -->
+    <color name="aria_border">#0A2A44</color>
+    <color name="aria_border_bright">#1A4A6E</color>
+
+    <!-- Semi-transparent overlays -->
+    <color name="aria_overlay_light">#1A00F5FF</color>
+    <color name="aria_overlay_medium">#3300F5FF</color>
+    <color name="aria_user_bubble">#0D1F3C</color>
+    <color name="aria_ai_bubble">#061422</color>
+</resources>

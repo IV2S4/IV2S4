@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ARIA</string>
+    <string name="app_subtitle">Artificial Responsive Intelligence Assistant</string>
+    <string name="tap_to_speak">TOCA PARA HABLAR</string>
+    <string name="listening">ESCUCHANDO...</string>
+    <string name="processing">PROCESANDO...</string>
+    <string name="speaking">HABLANDO...</string>
+    <string name="idle">ARIA EN LÍNEA</string>
+    <string name="greeting">Sistema ARIA inicializado. Soy tu asistente inteligente personal. ¿En qué puedo ayudarte hoy?</string>
+    <string name="api_key_hint">Ingresa tu API Key de Claude (Anthropic)</string>
+    <string name="save">GUARDAR</string>
+    <string name="settings">Configuración</string>
+    <string name="permission_required">Permisos requeridos para activar ARIA</string>
+    <string name="channel_name">ARIA Assistant</string>
+    <string name="channel_desc">Servicio de asistente ARIA activo</string>
+</resources>

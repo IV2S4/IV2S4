@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/aria_bg_deep">
+
+    <!-- Top HUD Bar -->
+    <LinearLayout
+        android:id="@+id/topHudBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAppName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A.R.I.A"
+                android:textColor="@color/aria_cyan"
+                android:textSize="22sp"
+                android:letterSpacing="0.3"
+                android:fontFamily="monospace"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/tvAppSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_subtitle"
+                android:textColor="@color/aria_text_dim"
+                android:textSize="9sp"
+                android:letterSpacing="0.1"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EN LÍNEA"
+            android:textColor="@color/aria_green"
+            android:textSize="10sp"
+            android:letterSpacing="0.2"
+            android:fontFamily="monospace"
+            android:layout_marginEnd="8dp"/>
+
+        <ImageButton
+            android:id="@+id/btnSettings"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_settings"
+            android:contentDescription="Settings"/>
+    </LinearLayout>
+
+    <!-- HUD Divider Line -->
+    <View
+        android:id="@+id/dividerTop"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aria_border"
+        app:layout_constraintTop_toBottomOf="@id/topHudBar"/>
+
+    <!-- Central HUD Display (Radar + Waveform) -->
+    <com.aria.assistant.ui.HUDRadarView
+        android:id="@+id/hudRadarView"
+        android:layout_width="280dp"
+        android:layout_height="280dp"
+        app:layout_constraintTop_toBottomOf="@id/dividerTop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/tvStatusLabel"
+        app:layout_constraintVertical_bias="0.5"/>
+
+    <!-- Status Label -->
+    <TextView
+        android:id="@+id/tvStatusLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/idle"
+        android:textColor="@color/aria_cyan"
+        android:textSize="11sp"
+        android:letterSpacing="0.3"
+        android:fontFamily="monospace"
+        app:layout_constraintTop_toBottomOf="@id/hudRadarView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/dividerMid"/>
+
+    <!-- Mid Divider -->
+    <View
+        android:id="@+id/dividerMid"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/aria_border"
+        app:layout_constraintTop_toBottomOf="@id/tvStatusLabel"
+        app:layout_constraintBottom_toTopOf="@id/chatContainer"/>
+
+    <!-- Chat Container -->
+    <FrameLayout
+        android:id="@+id/chatContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/dividerMid"
+        app:layout_constraintBottom_toTopOf="@id/bottomBar">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMessages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp"
+            android:clipToPadding="false"
+            android:scrollbars="none"/>
+
+        <!-- Empty state -->
+        <TextView
+            android:id="@+id/tvEmptyChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="ARIA lista para asistirte\nDi algo o toca el micrófono"
+            android:textColor="@color/aria_text_dim"
+            android:textSize="12sp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.1"
+            android:visibility="visible"/>
+    </FrameLayout>
+
+    <!-- Bottom Bar -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/aria_bg_dark"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <!-- Bottom Divider -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/aria_border"/>
+
+        <!-- Audio Waveform -->
+        <com.aria.assistant.ui.AudioWaveformView
+            android:id="@+id/waveformView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="16dp"/>
+
+        <!-- Input Row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="12dp"
+            android:paddingBottom="12dp"
+            android:paddingTop="4dp">
+
+            <!-- Text Input -->
+            <EditText
+                android:id="@+id/etInput"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:layout_weight="1"
+                android:hint="Escribe un comando..."
+                android:hintTextColor="@color/aria_text_dim"
+                android:textColor="@color/aria_text_primary"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:background="@drawable/bg_card_aria"
+                android:paddingHorizontal="12dp"
+                android:inputType="text"
+                android:imeOptions="actionSend"
+                android:maxLines="1"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Send button -->
+            <ImageButton
+                android:id="@+id/btnSend"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_card_aria"
+                android:src="@android:drawable/ic_menu_send"
+                android:imageTintList="@android:color/white"
+                android:contentDescription="Send"
+                android:layout_marginEnd="8dp"/>
+
+            <!-- Microphone Button -->
+            <ImageButton
+                android:id="@+id/btnMic"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_mic_button"
+                android:src="@drawable/ic_mic"
+                android:contentDescription="@string/tap_to_speak"
+                android:elevation="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

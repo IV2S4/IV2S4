@@ -1,0 +1,2 @@
+-keep class com.aria.assistant.** { *; }
+-keep class okhttp3.** { *; }

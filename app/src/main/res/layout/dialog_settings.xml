@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@color/aria_bg_card">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="◈ CONFIGURACIÓN ARIA"
+        android:textColor="@color/aria_cyan"
+        android:textSize="14sp"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.2"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="API KEY ANTHROPIC (CLAUDE)"
+        android:textColor="@color/aria_text_secondary"
+        android:textSize="10sp"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.1"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etApiKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="sk-ant-..."
+        android:hintTextColor="@color/aria_text_dim"
+        android:textColor="@color/aria_text_primary"
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:background="@drawable/bg_card_aria"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        android:layout_marginBottom="16dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NOMBRE DEL ASISTENTE"
+        android:textColor="@color/aria_text_secondary"
+        android:textSize="10sp"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.1"
+        android:layout_marginBottom="6dp"/>
+
+    <EditText
+        android:id="@+id/etAssistantName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ARIA"
+        android:hintTextColor="@color/aria_text_dim"
+        android:textColor="@color/aria_text_primary"
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:background="@drawable/bg_card_aria"
+        android:padding="10dp"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/btnSaveSettings"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:text="GUARDAR CONFIGURACIÓN"
+        android:textColor="@color/aria_bg_deep"
+        android:backgroundTint="@color/aria_cyan"
+        android:textSize="12sp"
+        android:fontFamily="monospace"
+        android:letterSpacing="0.1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Obtén tu API key en: console.anthropic.com"
+        android:textColor="@color/aria_text_dim"
+        android:textSize="10sp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

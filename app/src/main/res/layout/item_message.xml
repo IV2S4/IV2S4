@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <!-- User Message -->
+    <LinearLayout
+        android:id="@+id/userContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvUserLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TÚ"
+            android:textColor="@color/aria_cyan_dim"
+            android:textSize="9sp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.3"
+            android:layout_gravity="end"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/tvUserMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="280dp"
+            android:background="@drawable/bg_user_bubble"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/aria_text_primary"
+            android:textSize="13sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+    <!-- ARIA Message -->
+    <LinearLayout
+        android:id="@+id/ariaContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginTop="4dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvAriaLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="▸ ARIA"
+            android:textColor="@color/aria_blue_light"
+            android:textSize="9sp"
+            android:fontFamily="monospace"
+            android:letterSpacing="0.3"
+            android:layout_marginStart="4dp"
+            android:layout_marginBottom="2dp"/>
+
+        <TextView
+            android:id="@+id/tvAriaMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="300dp"
+            android:background="@drawable/bg_ai_bubble"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:textColor="@color/aria_text_secondary"
+            android:textSize="13sp"
+            android:fontFamily="monospace"/>
+    </LinearLayout>
+
+</LinearLayout>
