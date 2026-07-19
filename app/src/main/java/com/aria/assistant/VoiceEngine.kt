@@ -70,7 +70,7 @@ class VoiceEngine(
                     SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "Tiempo de espera agotado."
                     SpeechRecognizer.ERROR_NETWORK -> "Error de red. Verifica tu conexión."
                     SpeechRecognizer.ERROR_AUDIO -> "Error de audio."
-                    SpeechRecognizer.ERROR_NOT_RECOGNIZED -> "No pude entender. Habla más claro."
+                    SpeechRecognizer.ERROR_CLIENT -> "No pude entender. Habla más claro."
                     SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "Permiso de micrófono requerido."
                     else -> "Error de reconocimiento ($error)"
                 }
@@ -93,7 +93,6 @@ class VoiceEngine(
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, RecognizerIntent.LANGUAGE_MODEL_FREE_FORM)
             putExtra(RecognizerIntent.EXTRA_LANGUAGE, "es-ES")
             putExtra(RecognizerIntent.EXTRA_LANGUAGE_PREFERENCE, "es-ES")
-            putExtra(RecognizerIntent.EXTRA_ONLY_RETURN_LANGUAGE_RESULTS, false)
             putExtra(RecognizerIntent.EXTRA_MAX_RESULTS, 3)
             putExtra(RecognizerIntent.EXTRA_SPEECH_INPUT_MINIMUM_LENGTH_MILLIS, 1000L)
         }
