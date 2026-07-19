@@ -64,7 +64,7 @@ class CommandProcessor(private val context: Context) {
         // === ABRIR APPS ===
         val openPatterns = listOf(
             Regex("abr(?:e|ir) (.+)"),
-            Regex("abre la(?:?) app(?:licación)? (.+)"),
+            Regex("abre (?:la )?app(?:licación)? (.+)"),
             Regex("lanzar (.+)")
         )
         openPatterns.forEach { pattern ->
